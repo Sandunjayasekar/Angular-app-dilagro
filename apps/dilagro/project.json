@@ -8,15 +8,25 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/dilagro",
         "index": "apps/dilagro/src/index.html",
         "main": "apps/dilagro/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [
+          "zone.js"
+        ],
         "tsConfig": "apps/dilagro/tsconfig.app.json",
-        "assets": ["apps/dilagro/src/favicon.ico", "apps/dilagro/src/assets"],
-        "styles": ["apps/dilagro/src/styles.scss"],
+        "assets": [
+          "apps/dilagro/src/favicon.ico",
+          "apps/dilagro/src/assets"
+        ],
+        "styles": [
+          "@angular/material/prebuilt-themes/indigo-pink.css",
+          "apps/dilagro/src/styles.scss"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -66,14 +76,21 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
-        "lintFilePatterns": ["apps/dilagro/**/*.ts", "apps/dilagro/**/*.html"]
+        "lintFilePatterns": [
+          "apps/dilagro/**/*.ts",
+          "apps/dilagro/**/*.html"
+        ]
       }
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
         "jestConfig": "apps/dilagro/jest.config.ts",
         "passWithNoTests": true

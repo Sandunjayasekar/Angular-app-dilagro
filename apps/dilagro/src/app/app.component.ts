@@ -14,4 +14,7 @@ export class AppComponent {
   title = 'dilagro';
   name = 'Sandun';
   frameworks = ['nodejs', 'springboot', 'react'];
+  onClick() {
+    this.name = 'Fernando';
+  }
 }
